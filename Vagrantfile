@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
   config.vm.box_url = "https://s3.amazonaws.com/fusor-vagrant/fusor_centos_7.0_20150310.box"
 
   config.vm.provision :shell, :path => "setup.sh"
-  #config.vm.synced_folder ".", "/vagrant", type: "nfs"
+  config.vm.synced_folder ".", "/vagrant", type: "nfs"
   
   config.vm.network :private_network,
     :ip => "192.168.180.10",
